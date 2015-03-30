@@ -1,0 +1,34 @@
+[user]
+  name = Artis Abolts
+  email = artis.abolts@gmail.com
+[alias]
+  co = checkout
+[apply]
+  whitespace = nowarn
+[core]
+  editor = mate -w
+  excludesfile = ~/.gitignore
+[branch]
+  autosetuprebase = always
+[color]
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto
+[color "branch"]
+  current = green bold
+  local = yellow bold
+  remote = red bold
+[color "diff"]
+  meta = black bold
+  frag = cyan bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow bold
+  changed = red bold
+  untracked = black bold
+[push]
+  default = simple
+[github]
+  user = aboltart

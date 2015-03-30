@@ -1,0 +1,11 @@
+.DS_Store
+*~
+.~*
+~*
+sqlnet.log
+mkmf.log
+TODO
+.rvmrc
+.ruby-version
+.ruby-gemset
+.bundle
