@@ -17,3 +17,13 @@ function setjdk() {
 function removeFromPath() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
+
+##############################
+# Configure chruby
+##############################
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+# Configure gem_home (https://github.com/postmodern/gem_home)
+source /usr/local/share/gem_home/gem_home.sh
+

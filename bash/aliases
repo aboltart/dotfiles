@@ -1,0 +1,74 @@
+# changing directory to code project
+function c { cd ~/work/$1; }
+
+# misc
+alias reload='. ~/.bash_profile'
+alias quit='exit'
+alias ..='cd ..'
+
+# kill
+alias k='kill'
+alias k9='kill -9'
+
+# textmate
+function m { mate ${*:-.}; }
+
+# sublime text 2
+function s { sublime ${*:-.}; }
+
+# ls
+alias l='ls -1'
+alias ll='ls -lh'
+alias la='ls -lah'
+alias lh='ls -la | grep ":[0-9]* \."' # show only hidden files
+
+# git
+alias g='git'
+alias gpll='git pull'
+alias gpsh='git push'
+alias gd='git diff'
+alias gds='git diff --stat'
+alias gdc='git diff --cached'
+alias gdcs='git diff --cached --stat'
+alias gc='git commit'
+alias gci='git commit'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias gst='git status'
+alias grm="git status | grep -A 1000 'Changed but not updated' | grep deleted | awk '{print \$3}' | xargs git red"
+function ga { git add ${*:-.}; }
+alias gl='git log --graph "--pretty=format:%C(yellow bold)%h%Creset by %C(red)%an%Creset (%ar)%C(cyan bold)%d%Creset%n%s%n%b" --all'
+function gt { git branch --set-upstream $1 origin/$1; }
+alias gw='hub browse'
+
+# fix wget
+alias wget='wget --no-check-certificate'
+
+# rails
+function _rails() {
+  local command=$1;
+  shift;
+  if [ -x bin/rails ]; then
+    bin/rails $command $*
+  elif [ -x script/rails ]; then
+    script/rails $command $*
+  elif [ -x script/$command ]; then
+    script/$command $*
+  else
+    echo "no script/rails or script/$command found" >&2
+  fi
+}
+alias sc='_rails console'
+alias ss='_rails server'
+alias sg='_rails generate'
+alias sd='_rails destroy'
+alias rc='_rails console'
+alias rs='_rails server'
+alias rg='_rails generate'
+alias rd='_rails destroy'
+
+alias tlog='tail -f log/development.log log/test.log'
+
+# sqlplus with readline
+alias sqlplus="rlwrap sqlplus"

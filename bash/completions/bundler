@@ -1,0 +1,12 @@
+#!/bin/bash
+
+_bundle_open()
+{
+    local curw
+    COMPREPLY=()
+    curw=${COMP_WORDS[COMP_CWORD]}
+    local gemlist=$(cat Gemfile.lock | grep -E '^  ' | grep -v ':' | grep -v '!' | awk '{ print $1 }' | sort | uniq)
+    COMPREPLY=($(compgen -W "$gemlist" -- $curw));
+    return 0
+}
+complete -o default -F _bundle_open bundle
