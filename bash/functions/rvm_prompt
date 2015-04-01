@@ -1,0 +1,5 @@
+#!/bin/bash
+
+_rvm_prompt() {
+  local s=$(rvm-prompt v g); printf "${s:+ ${s}}";
+}

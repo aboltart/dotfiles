@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# prompt: [ root ~ master +? ] % cmd
+_user_root() {
+  [ $USER == "root" ] && printf 'root ';
+}

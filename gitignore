@@ -8,4 +8,6 @@ TODO
 .rvmrc
 .ruby-version
 .ruby-gemset
+.gem-home
 .bundle
+.gem

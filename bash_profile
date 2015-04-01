@@ -22,8 +22,11 @@ function removeFromPath() {
 # Configure chruby
 ##############################
 source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
 # Configure gem_home (https://github.com/postmodern/gem_home)
 source /usr/local/share/gem_home/gem_home.sh
 
+##############################
+# Configure to autoload ruby and gem home
+##############################
+source /Users/aboltart/.dotfiles/bash/completions/gem_home_auto.sh
+source /usr/local/share/chruby/auto.sh

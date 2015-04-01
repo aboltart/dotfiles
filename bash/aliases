@@ -14,7 +14,7 @@ alias k9='kill -9'
 function m { mate ${*:-.}; }
 
 # sublime text 2
-function s { sublime ${*:-.}; }
+function s { subl ${*:-.}; }
 
 # ls
 alias l='ls -1'

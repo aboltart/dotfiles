@@ -1,0 +1,19 @@
+#!/bin/bash
+# Function for displaying GIT branch in BASH prompt
+
+_scm_info() {
+  local s=
+  local b=`git symbolic-ref HEAD 2> /dev/null`
+  if [[ -n "${b}" ]] ; then
+    b=${b##refs/heads/}
+    if [[ -d .git/rebase-apply || -d .git/rebase-merge ]]; then
+      s="$b <"
+    elif [[ $(git status 2> /dev/null | tail -n1) != nothing* ]]; then
+      s="$b *"
+    else
+      s="$b"
+    fi
+  fi
+  s="${s:+ ${s}}"
+  printf "$s"
+}
