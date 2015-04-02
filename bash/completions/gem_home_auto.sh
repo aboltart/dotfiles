@@ -15,10 +15,30 @@ function gem_home_auto() {
     fi
   fi
 
-  # Unset gem_home if navigate away
+
+  # Unset gem_home if navigate away from place where was .gem-home file
   if [[ -n "$GEM_HOME_AUTO_PATH" ]] && [[ ! -n "$gem_home_path" ]]; then
-    gem_home_push
     unset GEM_HOME_AUTO_PATH
+
+    ###################################
+    # SET default gem home
+    #
+    local ruby_engine ruby_version gem_dir
+
+    eval "$(ruby - <<EOF
+puts "ruby_engine=#{defined?(RUBY_ENGINE) ? RUBY_ENGINE : 'ruby'};"
+puts "ruby_version=#{RUBY_VERSION};"
+EOF
+)"
+
+    gem_dir="$HOME/.gem/$ruby_engine/$ruby_version"
+
+    [[ "$GEM_HOME" == "$gem_dir" ]] && return
+
+    export GEM_HOME="$gem_dir"
+    export GEM_PATH="$gem_dir${GEM_PATH:+:}"
+    export PATH="$gem_dir/bin${PATH:+:}$PATH"
+
   fi
 }
 
@@ -30,4 +50,10 @@ if [ ! -f /usr/local/share/chruby/auto.sh ]; then
   elif [[ -n "$BASH_VERSION" ]]; then
     trap '[[ "$BASH_COMMAND" != "$PROMPT_COMMAND" ]] && gem_home_auto' DEBUG
   fi
+
+# else
+#
+# If "/usr/local/share/chruby/auto.sh" file exists then need to make following changes
+#
+#    trap '[[ "$BASH_COMMAND" != "$PROMPT_COMMAND" ]] && chruby_auto && gem_home_auto' DEBUG
 fi
