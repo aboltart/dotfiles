@@ -12,13 +12,13 @@ source ~/.bash/aliases
 #complete -o default -o nospace -F _git_diff gdc
 #complete -o default -o nospace -F _git_diff gdcs
 #source ~/.bash/completions/mategem
-#source ~/.bash/completions/bundler
-#source ~/.bash/completions/project
+source ~/.bash/completions/bundler
+source ~/.bash/completions/project
 complete -C ~/.bash/completions/rake -o default rake
 complete -C ~/.bash/completions/capistrano -o default cap
 
 # BASH prompt
-export PS1="[ \[\e[31;1m\]\$(_user_root)\[\e[34;1m\]\w\[\e[30;1m\]\[\e[32;1m\]\$(_scm_info)\[\e[0m\] ]\[\e[31;1m\] %\[\e[0m\] "
+export PS1="[ \[\e[31;1m\]\$(_user_root)\[\e[34;1m\]\w\[\e[30;1m\] \e[32;1m\]\$(_ruby_prompt)\[\e[0m\] \[\e[32;1m\]\$(_scm_info)\[\e[0m\]]\[\e[31;1m\] %\[\e[0m\] "
 
 export EDITOR="mate -w"
 

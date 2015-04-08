@@ -28,5 +28,7 @@ source /usr/local/share/gem_home/gem_home.sh
 ##############################
 # Configure to autoload ruby and gem home
 ##############################
-source /Users/aboltart/.dotfiles/bash/completions/gem_home_auto.sh
+
+# TODO: Make more path independent
+source /Users/aboltart/.dotfiles/bash/functions/gem_home_auto.sh
 source /usr/local/share/chruby/auto.sh

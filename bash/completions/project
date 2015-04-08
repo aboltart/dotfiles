@@ -1,0 +1,13 @@
+
+#!/bin/bash
+
+_projects()
+{
+    local curw
+    COMPREPLY=()
+    curw=${COMP_WORDS[COMP_CWORD]}
+    local projects=$(ls -1 ~/work)
+    COMPREPLY=($(compgen -W "$projects" -- $curw));
+    return 0
+}
+complete -o default -F _projects c
