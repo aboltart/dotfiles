@@ -72,3 +72,12 @@ alias tlog='tail -f log/development.log log/test.log'
 
 # sqlplus with readline
 alias sqlplus="rlwrap sqlplus"
+
+# brew list outdated
+alias bupdate='brew update && brew outdated'
+
+alias ..='cd ..'
+
+# Grep
+alias grep='grep --color=auto'
+alias pag='function _pag(){ ps aux | grep $1; };_pag'

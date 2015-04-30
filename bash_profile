@@ -32,3 +32,6 @@ source /usr/local/share/gem_home/gem_home.sh
 # TODO: Make more path independent
 source /Users/aboltart/.dotfiles/bash/functions/gem_home_auto.sh
 source /usr/local/share/chruby/auto.sh
+
+# Set default ruby
+chruby 2.2.2

@@ -18,11 +18,15 @@ complete -C ~/.bash/completions/rake -o default rake
 complete -C ~/.bash/completions/capistrano -o default cap
 
 # BASH prompt
+# For Help http://bashrcgenerator.com/ Generate your .bashrc PS1 prompt easily with a drag and drop interface
+#          http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
 export PS1="[ \[\e[31;1m\]\$(_user_root)\[\e[34;1m\]\w\[\e[30;1m\] \e[32;1m\]\$(_ruby_prompt)\[\e[0m\] \[\e[32;1m\]\$(_scm_info)\[\e[0m\]]\[\e[31;1m\] %\[\e[0m\] "
 
 export EDITOR="mate -w"
 
 ### Bash http://blog.macromates.com/2008/working-with-history-in-bash/
+#        http://www.cyberciti.biz/faq/unix-linux-bash-history-display-date-time/
+export HISTTIMEFORMAT="%d.%m.%y %T "
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
