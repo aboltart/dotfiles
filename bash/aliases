@@ -1,10 +1,16 @@
 # changing directory to code project
 function c { cd ~/work/$1; }
 
+# Navigations
+alias ..='cd ..'
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/projects"
+
 # misc
 alias reload='. ~/.bash_profile'
 alias quit='exit'
-alias ..='cd ..'
+alias path='echo -e ${PATH//:/\\n}'
 
 # kill
 alias k='kill'
@@ -75,8 +81,6 @@ alias sqlplus="rlwrap sqlplus"
 
 # brew list outdated
 alias bupdate='brew update && brew outdated'
-
-alias ..='cd ..'
 
 # Grep
 alias grep='grep --color=auto'

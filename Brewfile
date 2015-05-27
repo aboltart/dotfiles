@@ -42,14 +42,18 @@ brew 'python'
 brew 'pwgen'       # Password generating
 brew 'pdf2htmlex'  # PDF to HTML converter
 brew 'aria2'       # wget on steroids
+brew 'nmap'
+
 
 # DB
 brew 'sqlite'
 brew 'postgresql'
+brew 'redis'
 
 # Development
 brew 'git'
 brew 'phantomjs'
+brew 'qt'          # Dependency for capybara-webkit
 
 # Ruby
 brew 'chruby'

@@ -21,7 +21,7 @@ brew tap Homebrew/bundle
 Install System Packages and Applications
 
 ```
-brew bundle ~/.dotfiles/Brewfile
+brew bundle --file=$HOME/.dotfiles/Brewfile
 ```
 
 [Configure git](http://help.github.com/git-email-settings/)
@@ -30,3 +30,7 @@ brew bundle ~/.dotfiles/Brewfile
 git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```
+
+## Other good dotfile examples
+
+https://github.com/mathiasbynens/dotfiles
