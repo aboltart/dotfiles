@@ -34,3 +34,4 @@ git config --global user.email "your-email"
 ## Other good dotfile examples
 
 https://github.com/mathiasbynens/dotfiles
+https://github.com/aleksandrs-ledovskis/machine-config

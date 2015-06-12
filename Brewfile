@@ -39,21 +39,22 @@ brew 'wget'
 brew 'python'
 
 # Usifull utilites
-brew 'pwgen'       # Password generating
-brew 'pdf2htmlex'  # PDF to HTML converter
-brew 'aria2'       # wget on steroids
+brew 'pwgen'              # Password generating
+brew 'pdf2htmlex'         # PDF to HTML converter
+brew 'aria2'              # wget on steroids
 brew 'nmap'
 
 
 # DB
 brew 'sqlite'
 brew 'postgresql'
+brew 'mysql'
 brew 'redis'
 
 # Development
 brew 'git'
 brew 'phantomjs'
-brew 'qt'          # Dependency for capybara-webkit
+brew 'qt'                 # Dependency for capybara-webkit
 
 # Ruby
 brew 'chruby'
@@ -69,12 +70,14 @@ cask 'xquartz'
 cask 'caffeine'
 cask 'transmission'
 cask 'libreoffice'
+cask 'disk-inventory-x'   # Disk space analyzer
 
 # Image processing apps
 cask 'skitch'
 
 # Video processing apps
 cask 'vlc'
+cask 'handbrake'          # Video converter
 
 # Communication apps
 cask 'google-hangouts'
@@ -93,6 +96,8 @@ cask 'textmate'
 cask 'wireshark'
 cask 'cyberduck'
 cask 'apache-directory-studio'
+
+cask 'dnscrypt'           # Securing communications between a client and a DNS resolver.
 
 # Virtualization apps
 cask 'vagrant'
