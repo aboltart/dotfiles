@@ -82,6 +82,10 @@ alias sqlplus="rlwrap sqlplus"
 # brew list outdated
 alias bupdate='brew update && brew outdated'
 
+# Connect to Vpn
+alias teavpn="sudo openconnect $TE_OPENCONNECT_SERVER -u aboltart --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.04074, AnyConnect Agent 3.1.04074'"
+alias alisevpn='sudo openconnect $ALISE_OPENCONNECT_SERVER -c ~/certs/aboltart_TEA.pem -k ~/certs/aboltart_TEA.key -u aboltart'
+
 # Grep
 alias grep='grep --color=auto'
 alias pag='function _pag(){ ps aux | grep $1; };_pag'

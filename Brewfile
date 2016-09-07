@@ -44,6 +44,8 @@ brew 'pdf2htmlex'         # PDF to HTML converter
 brew 'aria2'              # wget on steroids
 brew 'nmap'
 
+# VPN
+brew 'openconnect'
 
 # DB
 brew 'sqlite'
@@ -55,6 +57,8 @@ brew 'redis'
 brew 'git'
 brew 'phantomjs'
 brew 'qt'                 # Dependency for capybara-webkit
+
+brew 'glide'              # Vendor Package Management for Golang
 
 # Ruby
 brew 'chruby'
@@ -69,11 +73,21 @@ brew 'ruby-build'
 cask 'xquartz'
 cask 'caffeine'
 cask 'transmission'
+
+# Office document
 cask 'libreoffice'
+cask 'openoffice'
+
 cask 'disk-inventory-x'   # Disk space analyzer
+cask 'the-unarchiver'
 
 # Image processing apps
 cask 'skitch'
+
+# Diagrams builder
+cask 'dia'
+cask 'mysqlworkbench'
+cask 'omnigraffle'        # Commercial
 
 # Video processing apps
 cask 'vlc'

@@ -2,6 +2,10 @@ for file in ~/.bash/functions/*; do
   source $file
 done
 
+# Some secret
+source $HOME/.private_env.sh
+
+export PATH=/usr/local/bin:$PATH
 source ~/.bash/aliases
 
 #source ~/.bash/completions/git
@@ -58,3 +62,6 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 ### Homebrew
 #export PATH=$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH
 #export MANPATH=$HOME/.homebrew/share/man:$MANPATH
+
+#### GO
+export GOPATH=$HOME/go_work
