@@ -83,8 +83,9 @@ alias sqlplus="rlwrap sqlplus"
 alias bupdate='brew update && brew outdated'
 
 # Connect to Vpn
-alias teavpn="sudo openconnect $TE_OPENCONNECT_SERVER -u aboltart --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.04074, AnyConnect Agent 3.1.04074'"
-alias alisevpn='sudo openconnect $ALISE_OPENCONNECT_SERVER -c ~/certs/aboltart_TEA.pem -k ~/certs/aboltart_TEA.key -u aboltart'
+alias teavpn="sudo openconnect \$OPENCONNECT_SERVER -u aboltart --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.04074, AnyConnect Agent 3.1.04074'"
+alias alisevpn='sudo openconnect $ALISE_OPENCONNECT_SERVER -p $ALISE_OPENCONNECT_CERT_PASSWD -c ~/certs/aboltart_TEA-2017.pem -k ~/certs/aboltart_TEA-2017.key -u aboltart'
+alias vaisalavpn="sudo openconnect \$VAISALA_OPENCONNECT_SERVER -u \$VAISALA_OPENCONNECT_USER --authgroup \$VAISALA_OPENCONNECT_AUTHGROUP -p \$VAISALA_OPENCONNECT_CERT_PASSWD -c ~/certs/exartab.pem -k ~/certs/exartab.key --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.14018, AnyConnect Agent 3.1.14018' --servercert sha256:5cd6eb88611762610fa09b3c6d8f726e80bb19609cccd8fee38ae45b7281f0f1"
 
 # Grep
 alias grep='grep --color=auto'

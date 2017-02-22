@@ -55,6 +55,7 @@ brew 'redis'
 
 # Development
 brew 'git'
+brew 'git-lfs'
 brew 'phantomjs'
 brew 'qt'                 # Dependency for capybara-webkit
 

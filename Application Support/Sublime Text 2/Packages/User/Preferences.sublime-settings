@@ -1,4 +1,9 @@
 {
+	"binary_file_patterns":
+	[
+		"node_modules/",
+		"dist/"
+	],
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
