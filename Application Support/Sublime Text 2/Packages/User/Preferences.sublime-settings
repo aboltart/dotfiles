@@ -4,6 +4,7 @@
 		"node_modules/",
 		"dist/"
 	],
+	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[

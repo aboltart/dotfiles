@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 tap 'homebrew/bundle'
+tap 'buo/cask-upgrade'
 
 brew 'brew-cask'
 
@@ -37,6 +38,7 @@ brew 'readline'
 brew 'ttfautohint'
 brew 'wget'
 brew 'python'
+brew 'geckodriver'        # For Selenium driver
 
 # Usifull utilites
 brew 'pwgen'              # Password generating
@@ -84,6 +86,7 @@ cask 'the-unarchiver'
 
 # Image processing apps
 cask 'skitch'
+cask 'gimp'
 
 # Diagrams builder
 cask 'dia'
