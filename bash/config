@@ -65,3 +65,6 @@ export PATH=$PATH:$DYLD_LIBRARY_PATH
 
 #### GO
 export GOPATH=$HOME/go_work
+
+#### For Signing Git commit
+export GPG_TTY=$(tty)

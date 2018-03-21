@@ -6,7 +6,6 @@ sqlnet.log
 mkmf.log
 TODO
 .rvmrc
-.ruby-version
 .ruby-gemset
 .gem-home
 .bundle
