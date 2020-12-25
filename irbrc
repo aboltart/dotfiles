@@ -1,4 +1,5 @@
 # http://linux.die.net/man/1/irb
+require 'rb-readline'
 
  # Use the simple prompt
 IRB.conf[:PROMPT_MODE]  = :SIMPLE
@@ -46,8 +47,8 @@ def history
 end
 
 # Allow using these gems without adding them to bundler
-$LOAD_PATH << "#{ENV['HOME']}/.gem/ruby/2.2.2/gems/hirb-0.7.3/lib"
-$LOAD_PATH << "#{ENV['HOME']}/.gem/ruby/2.2.2/gems/awesome_print-1.6.1/lib"
+$LOAD_PATH << "#{ENV['HOME']}/.gem/ruby/ENV['DEFAULT_RUBY']/gems/hirb-0.7.3/lib"
+$LOAD_PATH << "#{ENV['HOME']}/.gem/ruby/ENV['DEFAULT_RUBY']/gems/awesome_print-1.6.1/lib"
 
 begin
   require "awesome_print"

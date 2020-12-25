@@ -33,5 +33,15 @@ source /usr/local/share/gem_home/gem_home.sh
 source /Users/aboltart/.dotfiles/bash/functions/gem_home_auto.sh
 source /usr/local/share/chruby/auto.sh
 
+##############################
+# Configure to autoload project specific envs
+##############################
+source /Users/aboltart/.dotfiles/bash/functions/auto_env.sh
+
 # Set default ruby
-chruby 2.2.2
+chruby $DEFAULT_RUBY
+
+# Overide builtin to execute auto commands when change directories
+function cd {
+  builtin cd "$@" && trap '[[ "$BASH_COMMAND" != "$PROMPT_COMMAND" ]] && chruby_auto && gem_home_auto && auto_env' DEBUG
+}

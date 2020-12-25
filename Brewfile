@@ -1,16 +1,21 @@
 tap 'caskroom/cask'
-tap 'homebrew/bundle'
-tap 'buo/cask-upgrade'
+tap 'petere/postgresql'
+tap 'homebrew/cask-versions'
 
-brew 'brew-cask'
+# tap 'homebrew/bundle'
+# tap 'buo/cask-upgrade'
+
+# brew 'brew-cask'
 
 # Main packages
+brew 'bash'
 brew 'autoconf'
 brew 'cairo'
 brew 'cloog'
 brew 'fontconfig'
 brew 'freetype'
 brew 'gcc'
+brew 'cmake'
 brew 'gdbm'
 brew 'gettext'
 brew 'glib'
@@ -39,26 +44,31 @@ brew 'ttfautohint'
 brew 'wget'
 brew 'python'
 brew 'geckodriver'        # For Selenium driver
+brew 'libiconv'
 
 # Usifull utilites
 brew 'pwgen'              # Password generating
 brew 'pdf2htmlex'         # PDF to HTML converter
 brew 'aria2'              # wget on steroids
 brew 'nmap'
+brew 'gpg'                # GPG
+brew 'ncdu'               # Disk space monitoring from CLI
 
 # VPN
 brew 'openconnect'
 
 # DB
 brew 'sqlite'
-brew 'postgresql'
+# brew 'postgresql-10.5'
 brew 'mysql'
 brew 'redis'
+brew 'memcached'
+brew 'pgbadger' #  PostgreSQL Log Analyzer
 
 # Development
 brew 'git'
 brew 'git-lfs'
-brew 'phantomjs'
+cask 'phantomjs'
 brew 'qt'                 # Dependency for capybara-webkit
 
 brew 'glide'              # Vendor Package Management for Golang
@@ -76,10 +86,12 @@ brew 'ruby-build'
 cask 'xquartz'
 cask 'caffeine'
 cask 'transmission'
+cask 'coffeine'
 
 # Office document
 cask 'libreoffice'
-cask 'openoffice'
+# cask 'openoffice'
+cask 'evernote'
 
 cask 'disk-inventory-x'   # Disk space analyzer
 cask 'the-unarchiver'
@@ -102,21 +114,30 @@ cask 'google-hangouts'
 cask 'skype'
 
 # DB management apps
-cask 'pgadmin3'
+cask 'pgadmin4'
 cask 'sequel-pro'
 
 # Development work apps
-cask 'chefdk'
-cask 'gitx'
+cask 'rowanj-gitx'
 cask 'iterm2'
-cask 'sublime-text'
+# cask 'sublime-text'
 cask 'textmate'
 cask 'wireshark'
 cask 'cyberduck'
 cask 'apache-directory-studio'
+cask 'soapui'
 
 cask 'dnscrypt'           # Securing communications between a client and a DNS resolver.
+
+# Browsers
+cask 'chromium'
+cask 'google-chrome'
+cask 'google-chrome-canary'
+cask 'firefox'
 
 # Virtualization apps
 cask 'vagrant'
 cask 'virtualbox'
+
+# Chef
+cask 'chef/chef/chef-workstation'

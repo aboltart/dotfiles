@@ -1,0 +1,15 @@
+#!/usr/local/bin/bash
+
+install-ruby() {
+  echo $BASH_VERSION
+  local ruby_version="${1:-$DEFAULT_RUBY}"
+  local ruby_location="${2:-$HOME/.rubies}"
+  local ruby_version_location="$ruby_location/$ruby_version"
+  echo "Instal $ruby_version in $ruby_version_location location"
+
+  if [ $ruby_version = "list" ]; then
+    ruby-build --definitions
+  else
+    ruby-build $ruby_version $ruby_version_location
+  fi
+}

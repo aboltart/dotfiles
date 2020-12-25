@@ -24,7 +24,7 @@ complete -C ~/.bash/completions/capistrano -o default cap
 # BASH prompt
 # For Help http://bashrcgenerator.com/ Generate your .bashrc PS1 prompt easily with a drag and drop interface
 #          http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
-export PS1="[ \[\e[31;1m\]\$(_user_root)\[\e[34;1m\]\w\[\e[30;1m\] \e[32;1m\]\$(_ruby_prompt)\[\e[0m\] \[\e[32;1m\]\$(_scm_info)\[\e[0m\]]\[\e[31;1m\] %\[\e[0m\] "
+export PS1="[ \[\e[31;1m\]\$(_user_root)\[\e[34;1m\]\w\[\e[30;1m\] \[\e[32;1m\]\$(_ruby_prompt)\[\e[0m\] \[\e[32;1m\]\$(_scm_info)\[\e[0m\]]\[\e[31;1m\] %\[\e[0m\] "
 
 export EDITOR="mate -w"
 
@@ -44,6 +44,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 ### Ruby
+export DEFAULT_RUBY=2.6.6
 export RUBY_GC_HEAP_INIT_SLOTS=500000
 export RUBY_HEAP_SLOTS_INCREMENT=250000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
@@ -52,16 +53,22 @@ export RUBY_GC_OLDMALLOC_LIMIT=60000000
 export RUBY_HEAP_FREE_MIN=200000
 export RUBY_GC_HEAP_FREE_SLOTS=200000
 
+# https://github.com/rtomayko/shotgun/issues/69#issuecomment-338401331
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 ### Oracle
-export DYLD_LIBRARY_PATH="/usr/local/oracle/instantclient_11_2"
-export SQLPATH="/usr/local/oracle/instantclient_11_2"
-export TNS_ADMIN="/usr/local/oracle/network/admin"
+export DYLD_LIBRARY_PATH=/usr/local/oracle/instantclient_12_2
+export LD_LIBRARY_PATH=/usr/local/oracle/instantclient_12_2
+export OCI_DIR=/usr/local/oracle/instantclient_12_2
+export SQLPATH=/usr/local/oracle/instantclient_12_2
+export TNS_ADMIN=/usr/local/oracle/network/admin
 export NLS_LANG="AMERICAN_AMERICA.UTF8"
-export PATH=$PATH:$DYLD_LIBRARY_PATH
+export PATH=$PATH:/usr/local/oracle/instantclient_12_2
 
 ### Homebrew
 #export PATH=$HOME/.homebrew/sbin:$HOME/.homebrew/bin:$PATH
 #export MANPATH=$HOME/.homebrew/share/man:$MANPATH
+HOMEBREW_CURLRC=1
 
 #### GO
 export GOPATH=$HOME/go_work

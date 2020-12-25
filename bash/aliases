@@ -87,8 +87,8 @@ alias bupdate='brew update && brew outdated'
 # https://gist.github.com/aleksandrs-ledovskis/131c24db60db005fb84427ecca28e89c#file-vpnc-no-gw-conf
 
 alias teavpn="sudo openconnect \$OPENCONNECT_SERVER -u aboltart --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.04074, AnyConnect Agent 3.1.04074'" --script=~/openconnect/vpnc-no-gw.conf
-alias alisevpn='sudo openconnect $ALISE_OPENCONNECT_SERVER -p $ALISE_OPENCONNECT_CERT_PASSWD -c ~/certs/aboltart_TEA-2017.pem -k ~/certs/aboltart_TEA-2017.key -u aboltart'
-alias vaisalavpn="sudo openconnect \$VAISALA_OPENCONNECT_SERVER -u \$VAISALA_OPENCONNECT_USER --authgroup \$VAISALA_OPENCONNECT_AUTHGROUP -p \$VAISALA_OPENCONNECT_CERT_PASSWD -c ~/certs/exartab.pem -k ~/certs/exartab.key --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.14018, AnyConnect Agent 3.1.14018' --servercert sha256:5cd6eb88611762610fa09b3c6d8f726e80bb19609cccd8fee38ae45b7281f0f1"
+alias alisevpn='sudo openconnect $ALISE_OPENCONNECT_SERVER -p $ALISE_OPENCONNECT_CERT_PASSWD -c ~/certs/aboltart-2020-02-25_10.04.pem -k ~/certs/aboltart-2020-02-25_10.04.key -u aboltart'
+alias vaisalavpn="sudo openconnect \$VAISALA_OPENCONNECT_SERVER -u \$VAISALA_OPENCONNECT_USER --authgroup \$VAISALA_OPENCONNECT_AUTHGROUP -p \$VAISALA_OPENCONNECT_CERT_PASSWD -c ~/certs/exartab.pem -k ~/certs/exartab.key --useragent 'Cisco AnyConnect VPN Agent for Mac OS X 3.1.14018, AnyConnect Agent 3.1.14018' --servercert sha256:8bd1b45a3c5cebf38c9779262d1d35ce521be37bcb03d2cd7ea260b89d8f5c04"
 
 # Grep
 alias grep='grep --color=auto'
